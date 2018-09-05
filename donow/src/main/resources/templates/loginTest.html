@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Do</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="../static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Libraries CSS Files -->
+  <link href="../static/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../static/lib/semantic/semantic.min.css" rel="stylesheet">
+  <!-- Main Stylesheet File -->
+  <link href="../static/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#intro" class="scrollto">Do</a></h1>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#intro"></a></li>
+          <li><a href="#about">首页</a></li>
+          <li><a href="#features">使用指南</a></li>
+          <li><a href="#pricing">FAQ</a></li>
+          <li><a href="#team">关于</a></li>
+          <li><a href="">开始使用</a>
+            <ul>
+              <li><a href="main.html" >登录</a></li>
+              <li><a class="btn btn-info" data-toggle="modal" data-target="#myModal" id="registe" style="color: aliceblue;width: 50%;" >注册</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Main    
+  ============================-->
+  <section id="intro">
+    <div class="intro-text">
+      <h2 class="ui header" style="color: black" >欢迎使用Do</h2>
+      <p style="color:black ">帮助你发布消息，查看消息，发布任务完成任务</p>
+      <div class="ui segment">
+        <div class="ui container">
+          <div class="ui grid">
+              <div class="five wide column">
+                
+              </div>
+              <div class="six wide column">
+                    <form class="ui form">
+                      <div class="field">
+                        <input type="text" name="first-name" placeholder="学号">
+                      </div>
+                      <div class="field">
+                        <input type="password" name="last-name" placeholder="密码">
+                      </div><br>
+                    </form>
+                    <div class="ui buttons" style="width:80%">
+                      <a class="ui teal button" style="50%" href="main.html">登录</a>
+                      <div class="or"></div>
+                      <a class="btn btn-info" data-toggle="modal" data-target="#myModal" id="registe" style="color: aliceblue;width: 50%;" >注册</a>
+                    </div>
+              </div>
+              <div class="five wide column">
+              </div>
+          </div>
+        </div>
+      </div>     
+     </div>
+      
+  </section><!-- #intro -->
+
+  
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="copyright">
+            &copy; Copyright <strong>SHUXIN</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Avilon
+            -->
+            Designed by Bootstrap and Semantic
+           </div>
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+            <a href="#intro" class="scrollto">首页</a>
+            <a href="#about" class="scrollto">使用指南</a>
+            <a href="#">FAQ</a>
+            <a href="#">关于</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+    
+            <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                              <span class="sr-only">Close</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                                 <form class="ui form">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <!--这边需要logo-->
+                                    <br>
+                                    <br>
+                                    <div class="field" style="width:80%;margin-left:10%; margin-right: 10%; ">
+                                        <input type="text" name="first-name" placeholder="学号">
+                                    </div>
+                                    <div class="field" style="width: 80%;margin-left:10%; margin-right: 10%; ">
+                                        <input type="password" name="last-name" placeholder="姓名">
+                                    </div>
+                                    <div class="field" style="width:80%;margin-left:10%; margin-right: 10%; ">
+                                        <input type="text" name="first-name" placeholder="身份证后六位">
+                                    </div>
+                                    <div class="field" style="width: 80%;margin-left:10%; margin-right: 10%; ">
+                                        <input type="password" name="last-name" placeholder="密码">
+                                     </div>    
+                                    <br>    
+                                    <br>    
+                                     <button type="button" class="btn btn-primary">上传头像</button>&nbsp;&nbsp;&nbsp;
+                                        <a>暂无头像数据</a>
+                                   <br>
+                                   <br>
+                                   <br>
+                                   <br>
+                                </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                            <button type="button" class="btn btn-primary" href="main.html">注册</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  <!-------Modal---->
+    
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="../static/lib/jquery/jquery.min.js"></script>
+  <script src="../static/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="../static/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/lib/easing/easing.min.js"></script>
+  <script src="../static/lib/wow/wow.min.js"></script>
+  <script src="../static/lib/superfish/hoverIntent.js"></script>
+  <script src="../static/lib/superfish/superfish.min.js"></script>
+  <script src="../static/lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="../static/lib/semantic/semantic.min.js"></script>
+  <!-- Template Main Javascript File -->
+  <script src="../static/js/main.js"></script>
+</body>
+</html>

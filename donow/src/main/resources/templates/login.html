@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Do</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="../static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Libraries CSS Files -->
+  <link href="../static/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../static/lib/semantic/semantic.min.css" rel="stylesheet">
+  <!-- Main Stylesheet File -->
+  <link href="../static/css/style.css" rel="stylesheet">
+  
+  <!-- vue  axios -->
+  <script src="https://cdn.bootcss.com/vue/2.3.0/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.common.js"></script>
+  <script src="../static/js/main.js"></script>
+
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#intro" class="scrollto">Do</a></h1>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#intro"></a></li>
+          <li><a href="#about">首页</a></li>
+          <li><a href="#features">使用指南</a></li>
+          <li><a href="#pricing">FAQ</a></li>
+          <li><a href="#team">关于</a></li>
+          <li><a href="">开始使用</a>
+            <ul>
+              <li><a href="#" >登录</a></li>
+              <li><a href="#" >注册</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Main    
+  ============================-->
+  <section id="intro">
+    <div class="intro-text">
+      <h2 class="ui header" style="color: black" >欢迎使用Do</h2>
+      <p style="color:black ">帮助你发布消息，查看消息，发布任务完成任务</p>
+      <div class="ui segment">
+        <div class="ui container">
+          <div class="ui grid">
+              <div class="five wide column">
+                
+              </div>
+              <div class="six wide column" id="login">
+                    <form class="ui form">
+                      <errorinfo msg="学号或密码错误" v-if="infoShow"></errorinfo>
+					  <div class="field">
+                        <input type="text" v-model="loginName" placeholder="学号">
+                      </div>
+                      <div class="field">
+                        <input type="password" v-model="loginPassword" placeholder="密码">
+                      </div>
+                      <br>
+					</form>
+                    <div class="ui buttons" style="width:80%">
+                      <a class="ui teal button" @click="login">登录</a>
+                      <div class="or"></div>
+                      <a class="ui teal button" id="registe" >注册</a>
+                    </div>
+              </div>
+              <div class="five wide column">
+              </div>
+          </div>
+        </div>
+      </div>     
+     </div>
+  </section><!-- #intro -->
+
+  
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="copyright">
+            &copy; Copyright <strong>SHUXIN</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Avilon
+            -->
+            Designed by Bootstrap and Semantic
+           </div>
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+            <a href="#intro" class="scrollto">首页</a>
+            <a href="#about" class="scrollto">使用指南</a>
+            <a href="#">FAQ</a>
+            <a href="#">关于</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+    <!--style="width:30%;height:50%;margin-left: 35%;margin-right: 65%;margin-top:50%;margin-bottom: 50%;"-->
+    <!--style="width:30%;height:50%;top:50%;left:50%;"-->
+  <div class="ui modal" id="register" >
+     <i class="close icon"></i>
+     <div class="header">
+        用户注册
+     </div>
+      <div id="Logo">
+      
+      </div>
+       <form class="ui form">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="field" style="width:80%;margin-left:10%; margin-right: 10%; ">
+                <input type="text" v-model="regNum" placeholder="学号">
+				<info msg="学号已注册" v-if="nameIsRegShow"></info>
+            </div>
+            <div class="field" style="width: 80%;margin-left:10%; margin-right: 10%; ">
+                <input type="password" v-model="regName" placeholder="姓名">
+            </div>
+            <div class="field" style="width:80%;margin-left:10%; margin-right: 10%; ">
+                <input type="text" v-model="regCard" placeholder="身份证后六位">
+				<info msg="信息验证错误" v-if="infoIsRightShow"></info>
+            </div>
+            <div class="field" style="width: 80%;margin-left:10%; margin-right: 10%; ">
+                <input type="password" v-model="regPassword" placeholder="密码">
+            </div>
+			<div class="field" style="width: 80%;margin-left:10%; margin-right: 10%; ">
+                <input type="password" v-model="regPasswordRep" @blur="repeatIsRight" placeholder="再输入一次">
+				 <transition>
+					<info msg="两次密码输入不一致" v-show="repeatIsRightShow"></info>
+				 </transition>
+            </div>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+        </form>
+  <div class="actions">
+     <div class="ui positive button" style="width:80%;margin-left:10%; margin-right: 10%;" @click="register">
+        注册
+	 </div>
+	 <div align="center">
+	     <info msg="注册失败" v-if="registerShow"></info>
+	 </div>
+  </div>
+  
+</div>    
+  
+    
+  <a href="#header" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="../static/lib/jquery/jquery.min.js"></script>
+  <script src="../static/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="../static/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/lib/easing/easing.min.js"></script>
+  <script src="../static/lib/wow/wow.min.js"></script>
+  <script src="../static/lib/superfish/hoverIntent.js"></script>
+  <script src="../static/lib/superfish/superfish.min.js"></script>
+  <script src="../static/lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="../static/lib/semantic/semantic.min.js"></script>
+  <!-- Template Main Javascript File -->
+  <script src="../static/js/main.js"></script>
+  <script >
+    jQuery(document).ready(function($) {
+        $("#registe").click(function(){
+             $('.ui.modal').modal('show'); 
+        });
+    });
+  </script>
+  
+  <script >
+    jQuery(document).ready(function($) {
+        $("#registe").click(function(){
+             $('.ui.modal').modal('show'); 
+        });
+    });
+  </script>
+  
+  <script>
+  
+	<!-- 提示信息的组件 -->
+	let info = {
+		
+		template: '<p style="color:red;font-size:12px;">{{msg}}</p>',
+		props: [
+		  'msg'
+		]
+    }
+	
+    let login = new Vue({
+	  el: '#login',
+	  data: {
+		loginName : '',
+		loginPassword:'',
+		infoShow : false
+	  },
+
+	  methods: {
+	  
+	    <!-- 登录 -->
+		login: function (){
+		   alert('sha')
+		}
+      },
+	  components : {
+		 'errorinfo': info,
+	  }
+	})
+  
+	
+    let register = new Vue({
+	  el: '#register',
+	  data: {
+		regNum : '',
+		regName : '',
+		regCard : '',
+		regPassword : '',
+		regPasswordRep : '',
+		
+		repeatIsRightShow : false,
+		nameIsRegShow : false,
+		infoIsRightShow : false,
+		registerShow : false,
+ 
+	  },
+
+	  methods: {
+	  
+		<!-- 两次密码校验 -->
+		repeatIsRight: function (){
+		   if(this.regPassword != this.regPasswordRep){
+		       this.repeatIsRightShow = true;  
+		   }else{
+		       this.repeatIsRightShow = false;  
+		   }
+		},
+		<!-- 账号已经注册了 -->
+		nameIsReg: function (){
+		    var url = '';
+			axios.post(url, {num:this.regNum})
+			  
+			.then(function (result) {
+			    var resData = result.data;
+				if(resData.status == "0"){
+				    
+				}else{
+				
+				}
+			})
+			.catch(function (error) {
+			    console.log(error);
+			});	
+		},
+        <!-- 注册 -->	
+        register: function (){
+		    var url = '';
+			axios.post(url, {num:this.regNum,name: this.regName,card:this.regCard,password:this.regPassword})
+			  
+			.then(function (result) {
+			    var resData = result.data;
+				if(resData.status == "0"){
+				   //查看身份是否正确，错误则 infoIsRightShow = true
+				   //正确 则是否注册成功  失败则 registerShow = true
+				   //成功则跳转主页
+				   this.$router.replace('/Login')
+				}else{
+				
+				}
+			})
+			.catch(function (error) {
+			    console.log(error);
+			});						
+		},		
+      },
+	  components : {
+		 'info': info,
+	  }
+	})
+	
+  </script>
+  
+</body>
+</html>
