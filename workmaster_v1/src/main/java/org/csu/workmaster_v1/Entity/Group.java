@@ -4,52 +4,56 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Group {
-    public long GroupId;
-    public String GroupName;
-    public String GroupDescription;
-    public List<Long> UserList =new ArrayList<Long>();
-    public long GroupAvatar;
+    public long groupid;
+    public String groupname;
+    public String groupgescription;
+    public List<Long> userlist =new ArrayList<Long>();
+    public long groupavatar;
 
-    public Group(long groupId, String groupName, String groupDescription, long GroupAvatar) {
-        GroupId = groupId;
-        GroupName = groupName;
-        GroupDescription = groupDescription;
-        this.GroupAvatar = GroupAvatar;
+    public Group(long groupid, String groupname, String groupgescription, long groupavatar) {
+        this.groupid = groupid;
+        this.groupname = groupname;
+        this.groupgescription = groupgescription;
+        this.groupavatar = groupavatar;
     }
 
-    public long getGroupId() {
-        return GroupId;
+    public long getGroupid() {
+        return groupid;
     }
 
-    public void setGroupId(long groupId) {
-        GroupId = groupId;
+    public void setGroupid(long groupid) {
+        this.groupid = groupid;
     }
 
-    public String getGroupName() {
-        return GroupName;
+    public String getGroupname() {
+        return groupname;
     }
 
-    public void setGroupName(String groupName) {
-        GroupName = groupName;
+    public void setGroupname(String groupname) {
+        this.groupname = groupname;
     }
 
-    public String getGroupDescription() {
-        return GroupDescription;
+    public String getGroupgescription() {
+        return groupgescription;
     }
 
-    public void setGroupDescription(String groupDescription) {
-        GroupDescription = groupDescription;
+    public void setGroupgescription(String groupgescription) {
+        this.groupgescription = groupgescription;
     }
 
-    public List<Long> getUserList() {
-        return UserList;
+    public List<Long> getUserlist() {
+        return userlist;
     }
 
-    public void setUserList(List<Long> userList) {
-        UserList = userList;
+    public void setUserlist(List<Long> userlist) {
+        this.userlist = userlist;
     }
 
-    public long getGroupAvatar() { return GroupAvatar; }
+    public long getGroupavatar() {
+        return groupavatar;
+    }
 
-    public void setGroupAvatar(long groupAvatar) { GroupAvatar = groupAvatar; }
+    public void setGroupavatar(long groupavatar) {
+        this.groupavatar = groupavatar;
+    }
 }

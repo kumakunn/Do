@@ -4,95 +4,97 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Task {
-    public long TaskId;
-    public long GroupId;
-    public String TaskName;
-    public String TaskContent;
-    public long Time;
-    public long TaskPublisher;
-    public List UserDone= new ArrayList<Long>();
-    public String FileFormat;
-    public List FileList = new ArrayList<Long>();
+    public long taskid;
+    public long groupid;
+    public String taskname;
+    public String taskcontent;
+    public long time;
+    public long taskpublisher;
+    public List userdone = new ArrayList<Long>();
+    public String fileformat;
+    public List fileList = new ArrayList<Long>();
 
-    public Task(long taskId, long groupId, String taskName, String taskContent, long time, long taskPublisher, String fileFormat) {
-        TaskId = taskId;
-        GroupId = groupId;
-        TaskName = taskName;
-        TaskContent = taskContent;
-        Time = time;
-        TaskPublisher = taskPublisher;
-        FileFormat = fileFormat;
+    public Task(long taskid, long groupid, String taskname, String taskcontent, long time, long taskpublisher, List userdone, String fileformat) {
+        this.taskid = taskid;
+        this.groupid = groupid;
+        this.taskname = taskname;
+        this.taskcontent = taskcontent;
+        this.time = time;
+        this.taskpublisher = taskpublisher;
+        this.userdone = userdone;
+        this.fileformat = fileformat;
     }
 
-    public long getTaskId() {
-        return TaskId;
+    public long getTaskid() {
+        return taskid;
     }
 
-    public void setTaskId(long taskId) {
-        TaskId = taskId;
+    public void setTaskid(long taskid) {
+        this.taskid = taskid;
     }
 
-    public long getGroupId() {
-        return GroupId;
+    public long getGroupid() {
+        return groupid;
     }
 
-    public void setGroupId(long groupId) {
-        GroupId = groupId;
+    public void setGroupid(long groupid) {
+        this.groupid = groupid;
     }
 
-    public String getTaskName() {
-        return TaskName;
+    public String getTaskname() {
+        return taskname;
     }
 
-    public void setTaskName(String taskName) {
-        TaskName = taskName;
+    public void setTaskname(String taskname) {
+        this.taskname = taskname;
     }
 
-    public String getTaskContent() {
-        return TaskContent;
+    public String getTaskcontent() {
+        return taskcontent;
     }
 
-    public void setTaskContent(String taskContent) {
-        TaskContent = taskContent;
+    public void setTaskcontent(String taskcontent) {
+        this.taskcontent = taskcontent;
     }
 
     public long getTime() {
-        return Time;
+        return time;
     }
 
     public void setTime(long time) {
-        Time = time;
+        this.time = time;
     }
 
-    public long getTaskPublisher() {
-        return TaskPublisher;
+    public long getTaskpublisher() {
+        return taskpublisher;
     }
 
-    public void setTaskPublisher(long taskPublisher) {
-        TaskPublisher = taskPublisher;
+    public void setTaskpublisher(long taskpublisher) {
+        this.taskpublisher = taskpublisher;
     }
 
-    public List getUserDone() {
-        return UserDone;
+    public List getUserdone() {
+        return userdone;
     }
 
-    public void setUserDone(List userDone) {
-        UserDone = userDone;
+    public void setUserdone(List userdone) {
+        this.userdone = userdone;
     }
 
-    public String getFileFormat() {
-        return FileFormat;
+    public String getFileformat() {
+        return fileformat;
     }
 
-    public void setFileFormat(String fileFormat) {
-        FileFormat = fileFormat;
+    public void setFileformat(String fileformat) {
+        this.fileformat = fileformat;
     }
 
     public List getFileList() {
-        return FileList;
+        return fileList;
     }
 
     public void setFileList(List fileList) {
-        FileList = fileList;
+        this.fileList = fileList;
     }
 }
+

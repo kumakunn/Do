@@ -1,54 +1,54 @@
 package org.csu.workmaster_v1.Entity;
 
 public class Notificaion {
-    public long NoficationId;
-    public long SenderId;
-    public long Receiver;
-    public String NotifictionContent;
+    public long noficationid;
+    public long senderId;
+    public long receiver;
+    public String notifictioncontent;
     public long time;
-    public long GroupId;
-    public int  NotificationStatus;
+    public long groupid;
+    public int  notificationstatus;
 
-    public Notificaion(long noficationId, long senderId, long receiver, String notifictionContent, long time, long groupId, int notificationStatus) {
-        NoficationId = noficationId;
-        SenderId = senderId;
-        Receiver = receiver;
-        NotifictionContent = notifictionContent;
+    public Notificaion(long noficationid, long senderId, long receiver, String notifictioncontent, long time, long groupid, int notificationstatus) {
+        this.noficationid = noficationid;
+        this.senderId = senderId;
+        this.receiver = receiver;
+        this.notifictioncontent = notifictioncontent;
         this.time = time;
-        GroupId = groupId;
-        NotificationStatus = notificationStatus;
+        this.groupid = groupid;
+        this.notificationstatus = notificationstatus;
     }
 
-    public long getNoficationId() {
-        return NoficationId;
+    public long getNoficationid() {
+        return noficationid;
     }
 
-    public void setNoficationId(long noficationId) {
-        NoficationId = noficationId;
+    public void setNoficationid(long noficationid) {
+        this.noficationid = noficationid;
     }
 
     public long getSenderId() {
-        return SenderId;
+        return senderId;
     }
 
     public void setSenderId(long senderId) {
-        SenderId = senderId;
+        this.senderId = senderId;
     }
 
     public long getReceiver() {
-        return Receiver;
+        return receiver;
     }
 
     public void setReceiver(long receiver) {
-        Receiver = receiver;
+        this.receiver = receiver;
     }
 
-    public String getNotifictionContent() {
-        return NotifictionContent;
+    public String getNotifictioncontent() {
+        return notifictioncontent;
     }
 
-    public void setNotifictionContent(String notifictionContent) {
-        NotifictionContent = notifictionContent;
+    public void setNotifictioncontent(String notifictioncontent) {
+        this.notifictioncontent = notifictioncontent;
     }
 
     public long getTime() {
@@ -59,19 +59,19 @@ public class Notificaion {
         this.time = time;
     }
 
-    public long getGroupId() {
-        return GroupId;
+    public long getGroupid() {
+        return groupid;
     }
 
-    public void setGroupId(long groupId) {
-        GroupId = groupId;
+    public void setGroupid(long groupid) {
+        this.groupid = groupid;
     }
 
-    public int getNotificationStatus() {
-        return NotificationStatus;
+    public int getNotificationstatus() {
+        return notificationstatus;
     }
 
-    public void setNotificationStatus(int notificationStatus) {
-        NotificationStatus = notificationStatus;
+    public void setNotificationstatus(int notificationstatus) {
+        this.notificationstatus = notificationstatus;
     }
 }

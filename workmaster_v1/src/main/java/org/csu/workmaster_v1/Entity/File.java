@@ -1,25 +1,24 @@
 package org.csu.workmaster_v1.Entity;
 
 public class File {
-    public long FileId;
+    public long fileid;
     public File file;
-    public long Uploader;
-    public long TaskId;
+    public long uploader;
+    public long taskid;
 
-    
-    public File(long fileId, File file, long uploader, long taskId) {
-        FileId = fileId;
+    public File(long fileid, File file, long uploader, long taskid) {
+        this.fileid = fileid;
         this.file = file;
-        Uploader = uploader;
-        TaskId = taskId;
+        this.uploader = uploader;
+        this.taskid = taskid;
     }
 
-    public long getFileId() {
-        return FileId;
+    public long getFileid() {
+        return fileid;
     }
 
-    public void setFileId(long fileId) {
-        FileId = fileId;
+    public void setFileid(long fileid) {
+        this.fileid = fileid;
     }
 
     public File getFile() {
@@ -31,18 +30,18 @@ public class File {
     }
 
     public long getUploader() {
-        return Uploader;
+        return uploader;
     }
 
     public void setUploader(long uploader) {
-        Uploader = uploader;
+        this.uploader = uploader;
     }
 
-    public long getTaskId() {
-        return TaskId;
+    public long getTaskid() {
+        return taskid;
     }
 
-    public void setTaskId(long taskId) {
-        TaskId = taskId;
+    public void setTaskid(long taskid) {
+        this.taskid = taskid;
     }
 }

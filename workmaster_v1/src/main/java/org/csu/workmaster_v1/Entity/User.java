@@ -6,17 +6,25 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class User implements Serializable {
     public long id;
-    public String StudentId;
+    public String studentid;
     public String userpassword;
-    public int Verification_status;
-    public long Avatar ;
+    public int verification_status=0;
+    public long avatar=0 ;
     public String username;
     public List<Long> GroupList = new ArrayList<Long>();
 
     public User(){}
+
+    public User(String studentid, String userpassword, String username) {
+        this.studentid = studentid;
+        this.userpassword = userpassword;
+        this.username = username;
+        id = new Random().nextInt(10000000);
+    }
 
     public User(String username, String userpassword, long id) {
         this.username = username;
@@ -26,26 +34,10 @@ public class User implements Serializable {
 
     public User(long id, String studentId, String userpassword, long avatar, String username) {
         this.id = id;
-        StudentId = studentId;
+        studentid = studentId;
         this.userpassword = userpassword;
-        Avatar = avatar;
+        this.avatar = avatar;
         this.username = username;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getUserpassword() {
-        return userpassword;
-    }
-
-    public void setUserpassword(String userpassword) {
-        this.userpassword = userpassword;
     }
 
     public long getId() {
@@ -56,23 +48,56 @@ public class User implements Serializable {
         this.id = id;
     }
 
-    public String getStudentId() { return StudentId; }
+    public String getStudentId() {
+        return studentid;
+    }
 
-    public void setStudentId(String studentId) {   StudentId = studentId; }
+    public void setStudentId(String studentId) {
+        studentid = studentId;
+    }
 
-    public int getVerification_status() {  return Verification_status; }
+    public String getUserpassword() {
+        return userpassword;
+    }
 
-    public void setVerification_status(int verification_status) {  Verification_status = verification_status; }
+    public void setUserpassword(String userpassword) {
+        this.userpassword = userpassword;
+    }
 
-    public long getAvatar() {return Avatar; }
+    public int getVerification_status() {
+        return verification_status;
+    }
 
-    public void setAvatar(long avatar) { Avatar = avatar; }
+    public void setVerification_status(int verification_status) {
+        verification_status = verification_status;
+    }
 
-    public List<Long> getGroupList() { return GroupList; }
+    public long getAvatar() {
+        return avatar;
+    }
 
-    public void setGroupList(ArrayList<Long> groupList) { GroupList = groupList; }
+    public void setAvatar(long avatar) {
+        avatar = avatar;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public List<Long> getGroupList() {
+        return GroupList;
+    }
+
+    public void setGroupList(List<Long> groupList) {
+        GroupList = groupList;
+    }
 
     public String toString(){
         return  ReflectionToStringBuilder.toString(this, ToStringStyle.MULTI_LINE_STYLE);
     }
+
 }

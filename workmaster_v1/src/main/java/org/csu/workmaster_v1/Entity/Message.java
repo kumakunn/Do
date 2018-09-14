@@ -4,53 +4,53 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Message {
-    public long MessageId;
-    public long GroupId;
-    public String MessageName;
-    public String MessageContent;
+    public long messageid;
+    public long groupid;
+    public String messagename;
+    public String messagecontent;
     public long time;
-    public long MessagePublisher;
-    public List<Long> UserReaded;
+    public long messagepublisher;
+    public List<Long> userreaded;
 
-    public Message(long messageId, long groupId, String messageName, String messageContent, long time, long messagePublisher) {
-        MessageId = messageId;
-        GroupId = groupId;
-        MessageName = messageName;
-        MessageContent = messageContent;
+    public Message(long messageid, long groupid, String messagename, String messagecontent, long time, long messagepublisher) {
+        this.messageid = messageid;
+        this.groupid = groupid;
+        this.messagename = messagename;
+        this.messagecontent = messagecontent;
         this.time = time;
-        MessagePublisher = messagePublisher;
+        this.messagepublisher = messagepublisher;
     }
 
-    public long getMessageId() {
-        return MessageId;
+    public long getMessageid() {
+        return messageid;
     }
 
-    public void setMessageId(long messageId) {
-        MessageId = messageId;
+    public void setMessageid(long messageid) {
+        this.messageid = messageid;
     }
 
-    public long getGroupId() {
-        return GroupId;
+    public long getGroupid() {
+        return groupid;
     }
 
-    public void setGroupId(long groupId) {
-        GroupId = groupId;
+    public void setGroupid(long groupid) {
+        this.groupid = groupid;
     }
 
-    public String getMessageName() {
-        return MessageName;
+    public String getMessagename() {
+        return messagename;
     }
 
-    public void setMessageName(String messageName) {
-        MessageName = messageName;
+    public void setMessagename(String messagename) {
+        this.messagename = messagename;
     }
 
-    public String getMessageContent() {
-        return MessageContent;
+    public String getMessagecontent() {
+        return messagecontent;
     }
 
-    public void setMessageContent(String messageContent) {
-        MessageContent = messageContent;
+    public void setMessagecontent(String messagecontent) {
+        this.messagecontent = messagecontent;
     }
 
     public long getTime() {
@@ -61,19 +61,19 @@ public class Message {
         this.time = time;
     }
 
-    public long getMessagePublisher() {
-        return MessagePublisher;
+    public long getMessagepublisher() {
+        return messagepublisher;
     }
 
-    public void setMessagePublisher(long messagePublisher) {
-        MessagePublisher = messagePublisher;
+    public void setMessagepublisher(long messagepublisher) {
+        this.messagepublisher = messagepublisher;
     }
 
-    public List<Long> getUserReaded() {
-        return UserReaded;
+    public List<Long> getUserreaded() {
+        return userreaded;
     }
 
-    public void setUserReaded(List<Long> userReaded) {
-        UserReaded = userReaded;
+    public void setUserreaded(List<Long> userreaded) {
+        this.userreaded = userreaded;
     }
 }
